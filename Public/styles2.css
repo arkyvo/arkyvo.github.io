@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#timeMade{
+    font-family: 'Aref Ruqaa', serif; /* Use Aref Ruqaa */
+    font-weight: 700; /* Apply the bold style */
+    font-size: 3.5vw;
+    color: black;
+    position:absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+#mainBackground{
+    position: relative;
+    width: 100vw;
+    min-height: 100svh;
+    background-color:pink;
+    overflow-y: hidden;
+}
+.slide{
+    padding-top: 8svh;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    height: 100svh;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.slide.active {
+    opacity: 3;
+    pointer-events: auto;
+    position: absolute; /* keep absolute */
+    z-index: 2;
+}
+
+.content{
+    text-align: center;
+    width: 90svw;
+    height: 100svh;
+    overflow-y: auto;
+}
+.content h1{
+    font-family:  'Dancing Script', cursive;
+    font-weight: 700; /* Apply the bold style */
+    font-size:10.5vw; /* Increased size to suit the font */
+    color:purple;
+    width: fit-content;
+    margin: auto;
+}
+.content h2{
+    margin-top: 2svh;
+    font-family:  'Dancing Script', cursive;
+    font-weight: 700; /* Apply the bold style */
+    font-size: 8vw; /* Increased size to suit the font */
+    color:purple;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.content h3{
+    font-family: 'Aref Ruqaa', serif; /* Use Aref Ruqaa */
+    font-weight: 700; /* Apply the bold style */
+    font-size: 3vw; /* Increased size to suit the font */
+    width:fit-content;
+    margin:auto;
+}
+
+#aineImage{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    margin-top: 2svh;
+    margin-bottom: 2svh;
+    margin-left: auto;
+    margin-right: auto;
+    background-image:url('../Assets/Aine1.JPG');
+    background-size: cover;     /* Make image cover the div */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /*no repeat */ 
+}
+#imageBackground{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image:url('../Assets/FlowerBg2.jpg');
+    background-size: cover;     /* Make image cover the div */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /*no repeat */ 
+    opacity:0.65;
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+.content p{
+    font-weight: 700;
+    font-size: 4.5svw;
+    margin: auto;
+}
+
+
+.holder{
+    border: 0;
+    display: inline-block;
+    width: fit-content;
+     margin: 20px;
+}
+#card{
+    width:30svw;
+    height:10svh;
+    background-image:url('../Assets/Cards.png');
+    background-size: contain;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+}
+
+#time{
+    width: 30svw;
+    height: 10svh;
+    background-image:url('../Assets/clock1.jpg');
+    background-size: cover;
+}
+
+
+@media (max-width: 800px)
+{
+    .content h1{
+        font-size: 3vw;
+    }
+    .content h2{
+        font-size: 1.5vw;
+    }
+}
+
+#tMainBackground{
+    position: relative;
+    display:flex;
+    width: 100vw;
+    min-height: 100svh;
+    background-color:pink;
+    overflow: hidden;
+    justify-content: center;
+}
+#container{
+    z-index: 2;
+    position: relative;
+    justify-content:center;
+    text-align:center;
+    border-radius: 50px;
+    box-shadow: 0px 0px 15px -2px rgb(124, 12, 146);
+    background-color: rgb(241, 89, 140);
+    width:78svw;
+}
+#pocchacoSticker
+{
+    width:27svw;
+}
+#tContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 3vh;
+    z-index: 2;
+    align-items: center;
+    width: 80svw;
+    height: calc(100svh - 3vh);
+    overflow-y: auto;
+}
+#tContent h3{
+    font-family: 'Aref Ruqaa', serif; /* Use Aref Ruqaa */
+    font-weight: 700; /* Apply the bold style */
+    font-size: 5svw; /* Increased size to suit the font */
+    width:fit-content;
+}
+#tContent h4{
+    font-family: 'Aref Ruqaa', serif; /* Use Aref Ruqaa */
+    font-weight: 700; /* Apply the bold style */
+    font-size: 4svw; /* Increased size to suit the font */
+    width:fit-content;
+}
+#timer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #333;
+    font-family: 'Aref Ruqaa', serif;
+}
+
+#timer > div {
+    background-color: hsl(0, 16%, 89%);
+    margin: 20px 25px 20px 0;
+    border-radius: 30px;
+}
+
+div#sec
+{
+    margin: 20px 0px 20px 0;
+}
+
+#timer span {
+    width: 180px;
+    height: 150px;
+    display: block;
+    font-size: 9svw;
+    font-weight: 700;
+}
+
+#timer .label {
+    font-size: 3.5svw;
+    color: #555;
+}
+
+.polaroid-border{
+    position: relative;
+    display: flex;
+    padding: 4svw;
+    justify-content: center;
+    margin: 5svh 0 5svh;                      /* No individual margins; use container gap */
+    flex-basis: calc(50% - 1svw);   /* 50% width minus half-gap: Fits exactly 2 per row */
+    max-width: calc(50% - 1svw);    /* Prevents overflow */
+    height: auto;
+    border-radius: 2px;
+    max-height: 95%;
+    aspect-ratio: 1/1;              /* Square frame (overrides flex-basis for height) */
+    background-color: aliceblue;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+} 
+.polaroid-photo
+{
+    border-radius: 4px;
+    width:100%;
+    height: 80%;
+    aspect-ratio: 1/1;
+    margin-bottom: 0.5rem;
+    border: 4px solid #ddd;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.polaroid-container {
+    display: flex;              /* Enables flexbox for horizontal layout */
+    flex-direction: row;        /* Side by side (horizontal) */
+    justify-content: center;    /* Centers the pair horizontally in #tContent */
+    align-items: center;        /* Vertically centers if heights differ (optional) */
+    gap: 2svw;                  /* Space between polaroids (scalable; adjust as needed) */
+    flex-wrap: wrap;            /* Allows wrapping to next line on small screens */
+    width: 100%;                /* Full width of #tContent for centering */
+    margin: 4svh auto;          /* Vertical spacing above/below the pair; centers horizontally */
+}
